@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="antarctica DAO">
 	<main>
 		<svg
 			class="astro-a"
@@ -33,91 +33,74 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+		<h1>Welcome to <span class="text-gradient">Antarctica DAO</span></h1>
+		<p class="instructions">Collective supporting the development of Farcaster, a decentralized social media platform.<br />
+		<strong>Our Mission:</strong> Foster a thriving ecosystem for free and open communication.</p>
+		
 		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
+		  <Card href="https://farcaster.xyz/" title="Farcaster" body="Learn about the Farcaster protocol and its decentralized architecture." />
+		  <Card href="https://www.antarcticadao.org/roadmap" title="Roadmap" body="Explore our roadmap for supporting Farcaster development." />
+		  <Card href="https://www.antarcticadao.org/grants" title="Grants" body="Apply for grants to build on Farcaster or contribute to the ecosystem." />
+		  <Card href="https://discord.gg/" title="Community" body="Join our Discord community to connect with developers and enthusiasts." />
 		</ul>
 	</main>
 </Layout>
 
 <style>
 	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
+	  margin: auto;
+	  padding: 1rem;
+	  width: 800px;
+	  max-width: calc(100% - 2rem);
+	  color: #e2e8f0; /* Snow blue color */
+	  font-size: 20px;
+	  line-height: 1.6;
 	}
 	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
+	  position: absolute;
+	  top: -32px;
+	  left: 50%;
+	  transform: translatex(-50%);
+	  width: 220px;
+	  height: auto;
+	  z-index: -1;
 	}
 	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
+	  font-size: 4rem;
+	  font-weight: 700;
+	  line-height: 1;
+	  text-align: center;
+	  margin-bottom: 1em;
 	}
 	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+	  background-image: linear-gradient(to right, #a5b4fc, #c4b5fd); /* Pastel blue gradient */
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  background-size: 400%;
+	  background-position: 0%;
 	}
 	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
+	  margin-bottom: 2rem;
+	  border: 1px solid rgba(197, 212, 235, 0.25); /* Light snow blue with 25% opacity */
+	  background: linear-gradient(135deg, rgba(167, 189, 245, 0.66), rgba(201, 193, 253, 0.33)); /* Pastel blue gradient */
+	  padding: 1.5rem;
+	  border-radius: 8px;
 	}
 	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
+	  font-size: 0.8em;
+	  font-weight: bold;
+	  background: rgba(197, 212, 235, 0.12); /* Light snow blue with 12% opacity */
+	  color: #e2e8f0; /* Snow blue color */
+	  border-radius: 4px;
+	  padding: 0.3em 0.4em;
 	}
 	.instructions strong {
-		color: rgb(var(--accent-light));
+	  color: #e2e8f0; /* Snow blue color */
 	}
 	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+	  gap: 2rem;
+	  padding: 0;
 	}
-</style>
+  </style>
