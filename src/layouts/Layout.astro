@@ -1,5 +1,6 @@
 ---
 import Footer from '../components/Footer.astro';
+
 interface Props {
 	title: string;
 }
@@ -51,3 +52,12 @@ const { title } = Astro.props;
 			monospace;
 	}
 </style>
+<script>
+	const docTitle = document.title;
+window.addEventListener("blur", () => {
+  document.title = "🥶";
+});
+window.addEventListener("focus", () => {
+  document.title = docTitle;
+});
+</script>
