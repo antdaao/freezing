@@ -31,13 +31,41 @@
   .footer_data a:hover {
     text-decoration: underline;
   }
-  </style>
+
+  .donation_data {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    color: #8b5cf6; /* Purple theme color */
+  }
   
-  <footer>
-    <ul class="footer_data">
-      <li>Contact: <a href="mailto:antdao@waifu.club">antdao@waifu.club</a></li>
-      <li>antarctica LLC</li>
-      <li>Trust Company Complex Ajeltake Road</li>
-      <li>Ajeltake Island Majuro Marshall Islands MH96960</li>
-    </ul>
-  </footer>
+  .donation_data li {
+    margin-bottom: 0;
+  }
+  
+  .donation_data a {
+    color: inherit; /* Inherit the purple color from parent */
+    text-decoration: none;
+  }
+  
+  .donation_data a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<footer>
+  <ul class="footer_data">
+    <li>Contact: <a href="mailto:antdao@waifu.club">antdao@waifu.club</a></li>
+    <li>antarctica LLC</li>
+    <li>Trust Company Complex Ajeltake Road</li>
+    <li>Ajeltake Island Majuro Marshall Islands MH96960</li>
+  </ul>
+  <ul class="donation_data">
+    <li>Donate ETH: <a href="https://insightful-biscotti.fkey.id/" target="_blank">Donation Link</a></li>
+    <li>Donate XMR: 84tsxoUXKtL3j5GU3JNJ2EEPskGERCY47MdCmVn87qAoYXUoteq4dfUBnJpjeBnjnC2U41kf2DmRxDiANmmr4zzwCBwAv5c</li>
+  </ul>
+</footer>
