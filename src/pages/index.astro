@@ -1,78 +1,60 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Samurai from '../components/Samurai.astro'
 ---
 
-<Layout title="antarctica DAO">
-	<main>
-		<h1><Samurai/></h1>
-		<p class="instructions">Collective supporting the development of Farcaster, a decentralized social media platform.<br />
-		<strong>Our Mission:</strong> Foster a thriving ecosystem for free and open communication.</p>
-		<ul role="list" class="link-card-grid">
-		  <Card href="https://farcaster.xyz/" title="Farcaster" body="Learn about the Farcaster protocol and its decentralized architecture." />
-		  <Card href="/roadmap" title="Roadmap" body="Explore our roadmap for supporting Farcaster development." />
-		  <Card href="https://www.antarcticadao.org/" title="Grants" body="Apply for grants to build on Farcaster or contribute to the ecosystem." />
-		  <Card href="https://discord.gg/" title="Community" body="Join our Discord community to connect with developers and enthusiasts." />
-		</ul>
-	</main>
+<Layout title="Antarctica DAO - Supporting Farcaster Development">
+	<h1>Welcome to Antarctica DAO</h1>
+	<p>Collective supporting the development of Farcaster, a decentralized social media platform.</p>
+	<h2>Our Mission</h2>
+	<p>Foster a thriving ecosystem for free and open communication.</p>
+	
+	<div class="cta-grid">
+		<a href="/farcaster" class="cta-card">
+			<h3>Farcaster →</h3>
+			<p>Learn about the Farcaster protocol and its decentralized architecture.</p>
+		</a>
+		<a href="/roadmap" class="cta-card">
+			<h3>Roadmap →</h3>
+			<p>Explore our roadmap for supporting Farcaster development.</p>
+		</a>
+		<a href="/grants" class="cta-card">
+			<h3>Grants →</h3>
+			<p>Apply for grants to build on Farcaster or contribute to the ecosystem.</p>
+		</a>
+		<a href="/community" class="cta-card">
+			<h3>Community →</h3>
+			<p>Join our Discord community to connect with developers and enthusiasts.</p>
+		</a>
+	</div>
 </Layout>
 
 <style>
-	main {
-	  margin: auto;
-	  padding: 1rem;
-	  width: 800px;
-	  max-width: calc(100% - 2rem);
-	  color: #e2e8f0; /* Snow blue color */
-	  font-size: 20px;
-	  line-height: 1.6;
-	}
-	.astro-a {
-	  position: absolute;
-	  top: -32px;
-	  left: 50%;
-	  transform: translatex(-50%);
-	  width: 220px;
-	  height: auto;
-	  z-index: -1;
-	}
 	h1 {
-	  font-size: 4rem;
-	  font-weight: 700;
-	  line-height: 1;
-	  text-align: center;
-	  margin-bottom: 1em;
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
 	}
-	.text-gradient {
-	  background-image: linear-gradient(to right, #a5b4fc, #c4b5fd); /* Pastel blue gradient */
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
-	  background-size: 400%;
-	  background-position: 0%;
+	h2 {
+		font-size: 1.8rem;
+		margin-top: 2rem;
 	}
-	.instructions {
-	  margin-bottom: 2rem;
-	  border: 1px solid rgba(197, 212, 235, 0.25); /* Light snow blue with 25% opacity */
-	  background: linear-gradient(135deg, rgba(167, 189, 245, 0.66), rgba(201, 193, 253, 0.33)); /* Pastel blue gradient */
-	  padding: 1.5rem;
-	  border-radius: 8px;
+	.cta-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+		margin-top: 2rem;
 	}
-	.instructions code {
-	  font-size: 0.8em;
-	  font-weight: bold;
-	  background: rgba(197, 212, 235, 0.12); /* Light snow blue with 12% opacity */
-	  color: #e2e8f0; /* Snow blue color */
-	  border-radius: 4px;
-	  padding: 0.3em 0.4em;
+	.cta-card {
+		background-color: rgba(153, 102, 204, 0.1);
+		border: 1px solid var(--accent-color);
+		border-radius: 8px;
+		padding: 1.5rem;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
 	}
-	.instructions strong {
-	  color: #e2e8f0; /* Snow blue color */
+	.cta-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 5px 15px rgba(153, 102, 204, 0.3);
 	}
-	.link-card-grid {
-	  display: grid;
-	  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-	  gap: 2rem;
-	  padding: 0;
+	.cta-card h3 {
+		margin-top: 0;
 	}
-  </style>
+</style>

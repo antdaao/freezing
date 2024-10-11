@@ -1,0 +1,91 @@
+---
+---
+<header>
+	<nav>
+		<div class="logo">Antarctica DAO</div>
+		<div class="menu-toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<ul class="nav-links">
+			<li><a href="/">Home</a></li>
+			<li><a href="/farcaster">Farcaster</a></li>
+			<li><a href="/roadmap">Roadmap</a></li>
+			<li><a href="/grants">Grants</a></li>
+			<li><a href="/community">Community</a></li>
+		</ul>
+	</nav>
+</header>
+
+<style>
+	header {
+		background-color: rgba(26, 26, 26, 0.8);
+		backdrop-filter: blur(10px);
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+	}
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 2rem;
+	}
+	.logo {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: var(--accent-color);
+	}
+	.nav-links {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.nav-links li {
+		margin-left: 1.5rem;
+	}
+	.menu-toggle {
+		display: none;
+		flex-direction: column;
+		cursor: pointer;
+	}
+	.menu-toggle span {
+		width: 25px;
+		height: 3px;
+		background-color: var(--text-color);
+		margin: 2px 0;
+		transition: 0.4s;
+	}
+	@media (max-width: 768px) {
+		.nav-links {
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background-color: rgba(26, 26, 26, 0.95);
+			padding: 1rem;
+		}
+		.nav-links.active {
+			display: flex;
+		}
+		.nav-links li {
+			margin: 0.5rem 0;
+		}
+		.menu-toggle {
+			display: flex;
+		}
+	}
+</style>
+
+<script>
+	const menuToggle = document.querySelector('.menu-toggle');
+	const navLinks = document.querySelector('.nav-links');
+
+	menuToggle.addEventListener('click', () => {
+		navLinks.classList.toggle('active');
+	});
+</script>
